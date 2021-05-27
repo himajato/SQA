@@ -22,7 +22,7 @@ public class MonHocDAO {
 		while(rs.next()) {
 			MonHoc m = new MonHoc();
 			m.setId(rs.getString(1));
-			m.setMaMonHoc(rs.getNString(3));
+			m.setMaMonHoc(rs.getString(3));
 			m.setTenMonHoc(rs.getString(4));
 			m.setSoTinChi(rs.getInt(5));
 			m.setDiemCC(rs.getFloat(6));
@@ -30,7 +30,7 @@ public class MonHocDAO {
 			m.setDiemTh(rs.getFloat(8));
 			m.setDiemBt(rs.getFloat(9));
 			m.setDiemThi(rs.getFloat(10));
-			m.setDiemThi(rs.getFloat(11));
+			m.setDiemThiL2(rs.getFloat(11));
 			m.setPtCC(rs.getInt(12));
 			m.setPtKT(rs.getInt(13));
 			m.setPtTH(rs.getInt(14));
@@ -40,12 +40,11 @@ public class MonHocDAO {
 			m.setKq(rs.getString(18));
 			monHocList.add(m);
 		}
-		
-		return monHocList; 
+		return monHocList;
 
 	}
 	
-	public static int tonTinChi(String svId,String kihocId) throws SQLException {
+	public static int tongTinChi(String svId,String kihocId) throws SQLException {
 		int tong = 0;
 		Connection con = DBConnection.createConnection();
 		PreparedStatement prpStm = con.prepareStatement("select * from monhoc where SinhVienId =? and KiHocId = ?");
@@ -73,7 +72,12 @@ public class MonHocDAO {
 	}
 	
 	public static float diemTB(int tc,float tongDiemTB) {
-		float diemTB = tongDiemTB / (float)tc;
-		return diemTB;
+		float diemTb;
+		if(tc==0) {
+			diemTb =0;
+		} else {
+			diemTb = tongDiemTB / (float)tc;
+		}
+		return diemTb;
 	}
 }

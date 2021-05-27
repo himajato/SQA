@@ -16,8 +16,8 @@ public class KiHocDAO {
 		ResultSet rs = prepare.executeQuery();
 		while(rs.next()) {
 			kiHocId = rs.getString("Id");
-			
 		}
 		return kiHocId;
 	}
+	
 }

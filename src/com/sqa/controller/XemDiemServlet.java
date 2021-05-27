@@ -56,7 +56,7 @@ public class XemDiemServlet extends HttpServlet {
 			nganh = SinhVienDAO.getNganh(masv);
 			svId = SinhVienDAO.getId(masv);
 			list = MonHocDAO.cacMonHoc(svId, kihocId);
-			tongTc = MonHocDAO.tonTinChi(svId, kihocId);
+			tongTc = MonHocDAO.tongTinChi(svId, kihocId);
 			tongDiemTb = MonHocDAO.tongDiemTB(svId, kihocId);
 			diemTb = MonHocDAO.diemTB(tongTc, tongDiemTb);
 		} catch (SQLException e) {

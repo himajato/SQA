@@ -55,7 +55,7 @@
 			<input type="text" id="masv" name="masv" placeholder="Nhập mã sinh viên" required="required">
 			<label for="kihoc">Nhập kì học muốn xem điểm (năm học + kì học)</label>
 			<input type="number" id="kihoc" name="kihoc" placeholder="VD: 20192" required="required">
-			<input type="submit" value="Xem điểm">
+			<input type="submit" id="bt" value="Xem điểm">
 		</form>
 		
 		<script>

@@ -2,7 +2,7 @@ package com.sqa.model;
 
 import java.io.Serializable;
 
-public class KiHoc implements Serializable {
+public class KiHoc {
 	public int kihocId;
 	public String maKihoc;
 	public int getKihocId() {
@@ -20,6 +20,5 @@ public class KiHoc implements Serializable {
 	public KiHoc() {
 		
 	}
-	
-	
+
 }

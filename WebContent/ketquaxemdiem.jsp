@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sinh viên xem điểm</title>
+	<title>Kết quả xem điểm</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -123,7 +123,7 @@
 						<td><%=m.getDiemThiL2() %></td>
 						<td><%=m.getPtCC() %></td>
 						<td><%=m.getPtKT() %></td>
-						<td><%=m.getDiemTh() %></td>
+						<td><%=m.getPtTH() %></td>
 						<td><%=m.getPtBT() %></td>
 						<td><%=m.getPtThi() %></td>
 						<td><%=m.getDiemTB()%></td>
